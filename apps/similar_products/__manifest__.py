@@ -5,7 +5,6 @@
 	'version': '13.0.1',
     'author' : 'Andrew McGeough',
     'website' : 'wwww.mortimerapps.com',
-    'license': 'Other proprietary',
 	'category': 'Products',
 	'summary':  """Display similar products via fuzzy search on product name""",
 	'description': """
@@ -21,9 +20,5 @@
 	'application' : True,
 	'auto_install' : False,
     "license": "AGPL-3",
-	"image": ""
+	"image": "images/similar-products.png"
 }
-
-
-
-
