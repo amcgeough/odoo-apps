@@ -18,7 +18,7 @@
 	'application' : True,
 	'auto_install' : False,
     'license': 'AGPL-3',
-	'image': 'images/screen.png'
+	'images': 'images/screen.png'
 	# 'support': 'info@mortimerapps.com',
 	# 'price': 100,
 	# 'currency': 'EUR'
