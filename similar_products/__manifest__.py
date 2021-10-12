@@ -19,6 +19,6 @@
 	'installable' : True,
 	'application' : True,
 	'auto_install' : False,
-    "license": "AGPL-3",
-	"image": "images/similar-products.png"
+    'license': 'AGPL-3',
+	'image': 'images/similar-products.png'
 }
