@@ -1,3 +1,4 @@
 /base_search_fuzzy
 __pycache__/
 *.pyc
+*.DS_Store
