@@ -2,16 +2,16 @@
 
 {
 	'name' : 'Similar Products',
-	'version': '1.0',
+	'version': '13.0.1',
     'author' : 'Andrew McGeough',
-    'website' : 'wwww.google.com',
+    'website' : 'wwww.mortimerapps.com',
     'license': 'Other proprietary',
-	'category': 'Product',
+	'category': 'Products',
 	'summary':  """Display similar products via fuzzy search on product name""",
 	'description': """
-	Requires OCA addons base_search_fuzzy (provides Postgres fuzzy/trigram search) and web_widget_numeric_step
+	Requires OCA addons base_search_fuzzy (provides Postgres fuzzy/trigram search)
 	""",
-	'depends': ['product', 'base_search_fuzzy', 'web_widget_numeric_step'],
+	'depends': ['product', 'base_search_fuzzy'],
 	'data': [
 		'views/product_template_views.xml',
         'security/ir.model.access.csv',
@@ -20,6 +20,8 @@
 	'installable' : True,
 	'application' : True,
 	'auto_install' : False,
+    "license": "AGPL-3",
+	"image": ""
 }
 
 
