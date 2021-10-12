@@ -4,7 +4,7 @@
 	'name' : 'Similar Products',
 	'version': '13.0.1',
     'author' : 'Andrew McGeough',
-    'website' : 'wwww.mortimerapps.com',
+    'website' : 'https://www.mortimerapps.com',
 	'category': 'Products',
 	'summary':  'Display similar products via fuzzy search on product name',
 	'description': 'Requires OCA addons base_search_fuzzy (provides Postgres fuzzy/trigram search)',
@@ -18,7 +18,7 @@
 	'application' : True,
 	'auto_install' : False,
     'license': 'AGPL-3',
-	'image': 'images/similar-products.png',
+	'image': 'images/screen.png'
 	# 'support': 'info@mortimerapps.com',
 	# 'price': 100,
 	# 'currency': 'EUR'
