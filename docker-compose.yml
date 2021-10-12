@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     # command: odoo -d test -u similar_products --dev xml
-    image: odoo:13.0
+    image: odoo:14.0
     depends_on:
       - db
     ports:

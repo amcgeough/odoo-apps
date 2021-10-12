@@ -2,7 +2,7 @@
 
 {
 	'name' : 'Similar Products',
-	'version': '13.0.1',
+	'version': '14.0.1',
     'author' : 'Andrew McGeough',
     'website' : 'https://www.mortimerapps.com',
 	'category': 'Products',
