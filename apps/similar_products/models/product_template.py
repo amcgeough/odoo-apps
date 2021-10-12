@@ -17,6 +17,7 @@ class SimilarProductTemplate(models.Model):
 
         # set the fuzzy match threshold
         threshold = self.env['ir.config_parameter'].sudo().get_param('similar_products.similarity_threshold') or 0.3
+        threshold = 0 if float(threshold) < 0 else 1 if float(threshold) > 1 else threshold
         self.env.cr.execute(f"SELECT set_limit({threshold});")
 
         product_template = self.env['product.template'].search([('id','=',id),('active','in',[True,False])], limit=1)
