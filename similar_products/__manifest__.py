@@ -19,7 +19,7 @@
 	'auto_install' : False,
     'license': 'AGPL-3',
 	'image': 'images/similar-products.png',
-	'support': 'info@mortimerapps.com',
+	# 'support': 'info@mortimerapps.com',
 	# 'price': 100,
 	# 'currency': 'EUR'
 }
