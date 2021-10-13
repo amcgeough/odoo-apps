@@ -2,13 +2,13 @@
 
 {
 	'name' : 'Similar Products',
-	'version': '13.0.1',
+	'version': '13.0.2',
     'author' : 'Andrew McGeough',
     'website' : 'https://www.mortimerapps.com',
 	'category': 'Products',
 	'summary':  'Display similar products via fuzzy search on product name',
 	'description': 'Requires OCA addons base_search_fuzzy (provides Postgres fuzzy/trigram search)',
-	'depends': ['product', 'base_search_fuzzy'],
+	'depends': ['product', 'sale_management', 'base_search_fuzzy'],
 	'data': [
 		'views/product_template_views.xml',
         'security/ir.model.access.csv',
@@ -18,10 +18,5 @@
 	'application' : True,
 	'auto_install' : False,
     'license': 'AGPL-3',
-	'images':[
-        'images/screen.png'
-	],
-	# 'support': 'info@mortimerapps.com',
-	# 'price': 100,
-	# 'currency': 'EUR'
+	'images':['images/screen.png']
 }

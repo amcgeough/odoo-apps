@@ -1,6 +1,4 @@
-# -*- coding:utf-8 -*-
-
-from odoo import models,fields
+from odoo import models, fields
 
 
 class SimilarProductTemplate(models.Model):
@@ -12,22 +10,17 @@ class SimilarProductTemplate(models.Model):
         """
         View similar products using Name field via pg base_fuzzy addon
         """
-        id = self.id
-        self.env['similar.products'].search([('product_id','=',id)]).unlink()
 
-        # set the fuzzy match threshold
+        # Clear previous results
+        self.env['similar.products'].search([('product_id','=',self.id)]).unlink()
+
+        # Set the fuzzy match threshold using config setting value
         threshold = self.env['ir.config_parameter'].sudo().get_param('similar_products.similarity_threshold') or 0.3
         threshold = 0 if float(threshold) < 0 else 1 if float(threshold) > 1 else threshold
         self.env.cr.execute(f"SELECT set_limit({threshold});")
 
-        product_template = self.env['product.template'].search([('id','=',id),('active','in',[True,False])], limit=1)
-
-        # base_search_fuzzy pg search addon
-        similar_prods = self.env['product.template'].search([('name', '%', product_template.name)])
-        for rec in similar_prods:
-            if id != rec.id:
-                product_id = self.env['product.template'].search([('id','=',rec.id)], limit=1).id
-                sim = {'product_id': id,
-                        'similar_id': product_id
-                        }
-                self.env['similar.products'].create(sim)
+        # base_search_fuzzy postgres search addon (OCA) - %
+        similar_products = self.env['product.template'].search([('name', '%', self.name)])
+        for record in similar_products:
+            if self.id != record.id:
+                self.env['similar.products'].create({'product_id': self.id, 'similar_id': record.id})
