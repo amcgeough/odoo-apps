@@ -20,8 +20,5 @@
     'license': 'AGPL-3',
 	'images':[
         'images/screen.png'
-	],
-	# 'support': 'info@mortimerapps.com',
-	# 'price': 100,
-	# 'currency': 'EUR'
+	]
 }

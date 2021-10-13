@@ -8,7 +8,7 @@
         <field name="priority">100</field>
         <field name="arch" type="xml">
 
-            <!-- Add similar products tab -->
+            <!-- Add Similar Products tab -->
             <xpath expr='//page[@name="general_information"]' position="after">
                 <page string="Similar Products">
                     <button type="object" name="similar" string="" icon="fa-play" />
