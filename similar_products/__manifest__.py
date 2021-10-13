@@ -19,6 +19,6 @@
 	'auto_install' : False,
     'license': 'AGPL-3',
 	'images':[
-        'images/screen.png'
+        'static/description/thumbnail.png'
 	]
 }
