@@ -2,8 +2,8 @@
 
 {
 	'name' : 'Similar Products',
-	'version': '14.0.1',
-    'author' : 'Andrew McGeough',
+	'version': '14.0.2',
+    'author' : 'Mortimer Apps',
     'website' : 'https://www.mortimerapps.com',
 	'category': 'Products',
 	'summary':  'Display similar products via fuzzy search on product name',
