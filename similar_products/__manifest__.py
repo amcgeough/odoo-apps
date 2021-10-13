@@ -3,7 +3,7 @@
 {
 	'name' : 'Similar Products',
 	'version': '13.0.2',
-    'author' : 'Andrew McGeough',
+    'author' : 'Mortimer Apps',
     'website' : 'https://www.mortimerapps.com',
 	'category': 'Products',
 	'summary':  'Display similar products via fuzzy search on product name',
