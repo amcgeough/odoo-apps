@@ -2,7 +2,7 @@
 
 {
 	'name' : 'Similar Products',
-	'version': '14.0.2',
+	'version': '15.0.2',
     'author' : 'Mortimer Apps',
     'website' : 'https://www.mortimerapps.com',
 	'category': 'Products',

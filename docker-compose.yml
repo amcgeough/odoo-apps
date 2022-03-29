@@ -3,7 +3,7 @@ services:
   web:
     command: odoo -d test -u similar_products --dev xml --test-enable
     # command: odoo -d test -i base,web,similar_products --dev xml
-    image: odoo:14.0
+    image: odoo:15.0
     depends_on:
       - db
     ports:
