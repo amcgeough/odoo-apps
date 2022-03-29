@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
 
             <!-- Add threshold config setting -->
-            <xpath expr="//div[@id='multi_company']" position="after">
+            <xpath expr="//div[@id='companies']" position="after">
                 <h2>Similar Products</h2>
                 <div class="row mt16 o_settings_container">
                     <div class="col-12 col-lg-6 o_setting_box" title="">
