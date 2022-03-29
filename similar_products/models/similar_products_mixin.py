@@ -19,7 +19,7 @@ class SimilarProductsMixIn(models.AbstractModel):
         self.env.cr.execute(f"SELECT set_limit({threshold});")
 
         # base_search_fuzzy postgres search addon (OCA) - %
-        similar_products = self.env['product.template'].search([('name', '%', self.name)])
+        similar_products = self.env['product.template'].search([('name','%',self.name)])
         
         # Add new results
         for product_template in similar_products:
