@@ -1,7 +1,8 @@
 version: '3'
 services:
   web:
-    command: odoo -d test -i similar_products --dev xml --test-enable
+    command: odoo -d test -u similar_products --dev xml --test-enable
+    # command: odoo -d test -i base,web,similar_products --dev xml
     image: odoo:14.0
     depends_on:
       - db
