@@ -3,7 +3,7 @@ from odoo.tests.common import SavepointCase
 import logging
 
 
-class SimilarProductTestCase(SavepointCase):
+class SimilarProductTestCase(TransactionCase):
 
     @classmethod
     def setUpClass(cls):
