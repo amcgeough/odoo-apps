@@ -3,8 +3,8 @@
 {
 	'name' : 'Sales Order Number/Name Unique',
 	'version': '15.0.1',
-    'author' : 'Andrew McGeough',
-    'website' : '',
+    'author' : 'Mortimer Apps',
+    'website' : 'https://www.mortimerapps.com',
 	'category': 'Products',
 	'summary':  'Sales Order Number/Name Unique',
 	'description': 'Sales Order Number/Name Unique',
