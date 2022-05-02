@@ -1,16 +1,16 @@
 version: '3'
 services:
   web:
-    command: odoo -d test -u similar_products,sales_order_name_unique --dev xml --test-enable
+    # command: odoo -d test -i similar_products --dev xml --test-enable --log-level=test --stop-after-init
     # command: odoo -d test -i base,web,similar_products,sales_order_name_unique --dev xml
-    image: odoo:15.0
+    image: odoo:12.0
     depends_on:
       - db
     ports:
       - "8001:8069"
-    volumes:
+    # volumes:
     #   - ./config:/etc/odoo
-      - ./:/mnt/extra-addons
+      # - ./:/mnt/extra-addons
     environment:
       - HOST=db
       - USER=odoo
