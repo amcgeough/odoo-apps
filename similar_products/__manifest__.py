@@ -3,8 +3,7 @@
 {
 	'name' : 'Similar Products',
 	'version': '13.0.3',
-    'author' : 'Mortimer Apps',
-    'website' : 'https://www.mortimerapps.com',
+    'author' : 'Andrew McG',
 	'category': 'Products',
 	'summary':  'Display similar products via fuzzy search on product name',
 	'description': 'Requires OCA addons base_search_fuzzy (provides Postgres fuzzy/trigram search)',
