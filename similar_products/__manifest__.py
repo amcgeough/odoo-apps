@@ -23,5 +23,4 @@
 	'images':[
         'static/description/thumbnail.png'
 	],
-    'post_init_hook': 'install_pg_trgm',
 }

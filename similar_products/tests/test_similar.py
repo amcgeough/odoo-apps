@@ -1,5 +1,4 @@
 from odoo.tests import TransactionCase
-from odoo.tests.common import SavepointCase
 import logging
 
 

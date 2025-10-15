@@ -1,10 +1,10 @@
 version: '3'
 services:
   web:
-    command: odoo -d test-16 -u similar_products --dev xml --test-enable --log-level=test --stop-after-init
-    # command: odoo -d test-16 -i base,web,similar_products --dev xml
-    # command: odoo -d test-16 -u similar_products --dev xml
-    image: odoo:16.0
+    command: odoo -d test-17 -u similar_products --dev xml --test-enable --log-level=test --stop-after-init
+    # command: odoo -d test-17 -i base,web,similar_products --dev xml
+    # command: odoo -d test-17 -u similar_products --dev xml
+    image: odoo:17.0
     depends_on:
       - db
     ports:
