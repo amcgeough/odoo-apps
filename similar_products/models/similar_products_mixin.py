@@ -36,6 +36,7 @@ class SimilarProductsMixIn(models.AbstractModel):
         # base_search_fuzzy postgres search addon (OCA) - %
         logging.info(f"Searching '{self.name_fuzzy}' with id '{self.id}' for similar products with threshold '{threshold}'")
         similar_products = self.env['product.template'].search([('name_fuzzy', '%', self.name_fuzzy)])
+        logging.info(f"Found {len(similar_products)} similar products")
         
         # Add new results
         for product_template in similar_products:

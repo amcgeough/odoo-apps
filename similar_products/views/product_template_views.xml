@@ -12,10 +12,10 @@
             <xpath expr='//page[@name="general_information"]' position="after">
                 <page string="Similar Products">
                     <button type="object" name="similar" string="" icon="fa-play" title="Find Similar Products" class="oe_highlight" />
-                    <field name="similar_products" mode="tree" >
-                        <tree string="Similar Products" editable="bottom" create="0" limit="50">
+                    <field name="similar_products" mode="list" >
+                        <list string="Similar Products" editable="bottom" create="0" limit="50">
                             <field name="similar_id" string="Similar Products" />
-                        </tree>
+                        </list>
                         <form string="New Products">
                             <group>
                                 <group>
