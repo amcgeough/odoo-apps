@@ -1,27 +1,28 @@
 version: '3'
 services:
   web:
-    # command: odoo -d test -i similar_products --dev xml --test-enable --log-level=test --stop-after-init
-    # command: odoo -d test -i base,web,similar_products,sales_order_name_unique --dev xml
-    image: odoo:12.0
+    command: odoo -d test-16 -u similar_products --dev xml --test-enable --log-level=test --stop-after-init
+    # command: odoo -d test-16 -i base,web,similar_products --dev xml
+    # command: odoo -d test-16 -u similar_products --dev xml
+    image: odoo:16.0
     depends_on:
       - db
     ports:
-      - "8001:8069"
-    # volumes:
-    #   - ./config:/etc/odoo
-      # - ./:/mnt/extra-addons
+      - "8069:8069"
+    volumes:
+      # - ./config:/etc/odoo
+      - ./:/mnt/extra-addons
     environment:
       - HOST=db
       - USER=odoo
       - PASSWORD=odoo
   db:
-    image: postgres:10
+    image: postgres:13
     # ports:
     #   - "5432:5432"
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
-    # volumes:
-    #   - ../data/odoo-db-data-base:/var/lib/postgresql/data
+    volumes:
+      - ./data/odoo-db:/var/lib/postgresql/data

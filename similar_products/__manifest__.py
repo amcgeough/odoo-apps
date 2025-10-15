@@ -7,7 +7,10 @@
 	'category': 'Products',
 	'summary':  'Display similar products via fuzzy search on product name',
 	'description': 'Requires OCA addons base_search_fuzzy (provides Postgres fuzzy/trigram search)',
-	'depends': ['product', 'sale_management', 'stock', 'base_search_fuzzy'],
+	'depends': [
+				'sale_management',
+				'base_search_fuzzy'
+				],
 	'data': [
 		'views/product_template_views.xml',
         'security/ir.model.access.csv',
@@ -19,5 +22,6 @@
     'license': 'AGPL-3',
 	'images':[
         'static/description/thumbnail.png'
-	]
+	],
+    'post_init_hook': 'install_pg_trgm',
 }

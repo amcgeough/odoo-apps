@@ -1,9 +1,24 @@
-from odoo import models, fields
+from odoo import models, fields, api
+import logging
 
 
 class SimilarProductsMixIn(models.AbstractModel):
     _name = 'similar.products.mixin'
     _description = 'Resuable abstract mixin class for similar products'
+
+    name_fuzzy = fields.Char(
+        string="Fuzzy Name",
+        compute="_compute_name_fuzzy",
+        store=True,
+        index=True,
+        help="Non-translatable name for fuzzy search"
+    )
+
+    @api.depends('name')
+    def _compute_name_fuzzy(self):
+        for rec in self:
+            rec.name_fuzzy = rec.name
+
 
     def similar(self):
         """
@@ -19,7 +34,8 @@ class SimilarProductsMixIn(models.AbstractModel):
         self.env.cr.execute(f"SELECT set_limit({threshold});")
 
         # base_search_fuzzy postgres search addon (OCA) - %
-        similar_products = self.env['product.template'].search([('name', '%', self.name)])
+        logging.info(f"Searching '{self.name_fuzzy}' with id '{self.id}' for similar products with threshold '{threshold}'")
+        similar_products = self.env['product.template'].search([('name_fuzzy', '%', self.name_fuzzy)])
         
         # Add new results
         for product_template in similar_products:
